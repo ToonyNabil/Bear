@@ -1,0 +1,141 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --maintransition: 0.5s;
+}
+body {
+  background-color: #62c8fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-box {
+  position: relative;
+  width: 450px;
+  height: 350px;
+  border: 6px solid white;
+  border-radius: 20px;
+}
+.main-box .body {
+  background: white;
+  width: 230px;
+  height: 270px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.main-box .body::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  left: -15px;
+  top: 25px;
+  transition: var(--maintransition);
+}
+.main-box:hover .body::before {
+  left: -10px;
+}
+.main-box .body::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  right: -15px;
+  top: 25px;
+  transition: var(--maintransition);
+}
+.main-box:hover .body::after {
+  right: 0px;
+}
+.main-box .eyes {
+  width: 65px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--maintransition);
+}
+.main-box:hover .eyes {
+  transform: translateX(-15px);
+}
+.main-box .eyes span {
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+}
+.main-box .face {
+  background-color: #62c8fc99;
+  width: 65px;
+  height: 110px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  transition: var(--maintransition);
+}
+.main-box:hover .face {
+  transform: translateX(-15px);
+  width: 70px;
+}
+.main-box .face .nose {
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  transition: var(--maintransition);
+  position: relative;
+}
+.main-box:hover .face .nose {
+  transform: translate(10px, -5px);
+}
+.main-box .face .nose::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  top: 10px;
+  left: 8px;
+  transition: var(--maintransition);
+}
+.main-box:hover .face .nose::before {
+  top: 10px;
+  left: 8px;   
+}
+.main-box .face .mouse {
+  background: black;
+  width: 15px;
+  height: 5px;
+  transition: var(--maintransition);
+}
+.main-box:hover .face .mouse {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
