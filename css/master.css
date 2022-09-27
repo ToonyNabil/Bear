@@ -22,6 +22,12 @@ body {
   border: 6px solid white;
   border-radius: 20px;
 }
+@media (max-width: 767px) {
+  .main-box {
+    width: 330px;
+    height: 330px;
+  }
+}
 .main-box .body {
   background: white;
   width: 230px;
