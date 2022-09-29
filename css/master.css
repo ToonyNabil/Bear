@@ -29,7 +29,7 @@ body {
   }
 }
 .main-box .body {
-  background: white;
+  background-color: white;
   width: 230px;
   height: 270px;
   position: absolute;
@@ -50,9 +50,6 @@ body {
   top: 25px;
   transition: var(--maintransition);
 }
-.main-box:hover .body::before {
-  left: -10px;
-}
 .main-box .body::after {
   content: "";
   width: 60px;
@@ -63,9 +60,6 @@ body {
   right: -15px;
   top: 25px;
   transition: var(--maintransition);
-}
-.main-box:hover .body::after {
-  right: 0px;
 }
 .main-box .eyes {
   width: 65px;
@@ -78,9 +72,6 @@ body {
   justify-content: space-between;
   align-items: center;
   transition: var(--maintransition);
-}
-.main-box:hover .eyes {
-  transform: translateX(-15px);
 }
 .main-box .eyes span {
   width: 15px;
@@ -104,10 +95,6 @@ body {
   flex-direction: column;
   transition: var(--maintransition);
 }
-.main-box:hover .face {
-  transform: translateX(-15px);
-  width: 70px;
-}
 .main-box .face .nose {
   width: 50px;
   height: 50px;
@@ -115,9 +102,6 @@ body {
   border-radius: 50%;
   transition: var(--maintransition);
   position: relative;
-}
-.main-box:hover .face .nose {
-  transform: translate(10px, -5px);
 }
 .main-box .face .nose::before {
   content: "";
@@ -130,18 +114,112 @@ body {
   left: 8px;
   transition: var(--maintransition);
 }
-.main-box:hover .face .nose::before {
-  top: 10px;
-  left: 8px;   
-}
 .main-box .face .mouse {
   background: black;
   width: 15px;
   height: 5px;
   transition: var(--maintransition);
 }
-.main-box:hover .face .mouse {
+.t-over {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 1;
+}
+.t-over:nth-child(1) {
+  left: 0; 
+  top: 0;
+  transition: var(--maintransition);
+}
+.t-over:nth-child(1):hover ~ .body::before {
+  left: 0;
+}
+.t-over:nth-child(1):hover ~ .body::after {
+  right: -13px;
+}
+.t-over:nth-child(1):hover ~ .body .eyes {
+  transform: translateX(-46px);
+}
+.t-over:nth-child(1):hover ~ .body .face {
+  width: 70px;
+  transform: translateX(-45px);
+}
+.t-over:nth-child(1):hover ~ .body .face .nose {
+  transform: translate(-5px, -5px);
+}
+.t-over:nth-child(1):hover ~ .body .face .mouse {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+}
+.t-over:nth-child(2) {
+  right: 0;
+  top: 0;
+  transition: var(--maintransition);
+}
+.t-over:nth-child(2):hover ~ .body::before {
+  left: -20px;
+}
+.t-over:nth-child(2):hover ~ .body::after {
+  right: 0px;
+}
+.t-over:nth-child(2):hover ~ .body .eyes {
+  transform: translateX(-15px);
+}
+.t-over:nth-child(2):hover ~ .body .face {
+  transform: translateX(-15px);
+  width: 70px;
+}
+.t-over:nth-child(2):hover ~ .body .face .nose {
+  transform: translate(5px, -5px);
+}
+.t-over:nth-child(2):hover ~ .body .face .mouse {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.t-over:nth-child(3) {
+  left: 0;
+  bottom: 0;
+}
+.t-over:nth-child(3):hover ~ .body::before {
+  left: 0;
+  top: 15px;
+}
+.t-over:nth-child(3):hover ~ .body::after {
+  right: -20px;
+  top: 15px;
+}
+.t-over:nth-child(3):hover ~ .body .eyes {
+  transform: translate(-45px, 15px);
+}
+.t-over:nth-child(3):hover ~ .body .face {
+  transform: translate(-45px, 10px);
+  width: 70px;
+}
+.t-over:nth-child(3):hover ~ .body .face .nose {
+  transform: translate(-5px, 0px);
+}
+.t-over:nth-child(4) {
+  right: 0;
+  bottom: 0;
+  transition: var(--maintransition);
+}
+.t-over:nth-child(4):hover ~ .body::before {
+  left: -20px;
+  top: 15px;
+}
+.t-over:nth-child(4):hover ~ .body::after {
+  right: 0;
+  top: 15px;
+}
+.t-over:nth-child(4):hover ~ .body .eyes {
+  transform: translate(-15px, 15px);
+}
+.t-over:nth-child(4):hover ~ .body .face {
+  transform: translate(-15px, 5px);
+  width: 70px;
+}
+.t-over:nth-child(4):hover ~ .body .face .nose {
+  transform: translate(5px, 0px);
 }
