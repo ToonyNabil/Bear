@@ -191,10 +191,10 @@ body {
   top: 15px;
 }
 .t-over:nth-child(3):hover ~ .body .eyes {
-  transform: translate(-45px, 15px);
+  transform: translate(-50px, 15px);
 }
 .t-over:nth-child(3):hover ~ .body .face {
-  transform: translate(-45px, 10px);
+  transform: translate(-45px, 5px);
   width: 70px;
 }
 .t-over:nth-child(3):hover ~ .body .face .nose {
